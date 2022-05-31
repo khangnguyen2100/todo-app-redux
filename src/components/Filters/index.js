@@ -1,10 +1,11 @@
 import { Col, Row, Input, Typography, Radio, Select, Tag } from 'antd';
-
 const { Search } = Input;
 
 export default function Filters() {
+  
   return (
     <Row justify='center'>
+      {/* Search */}
       <Col span={24}>
         <Typography.Paragraph
           style={{ fontWeight: 'bold', marginBottom: 3, marginTop: 10 }}
@@ -13,24 +14,28 @@ export default function Filters() {
         </Typography.Paragraph>
         <Search placeholder='input search text' />
       </Col>
+      {/* Filter By Status */}
       <Col sm={24}>
         <Typography.Paragraph
           style={{ fontWeight: 'bold', marginBottom: 3, marginTop: 10 }}
         >
           Filter By Status
         </Typography.Paragraph>
+
         <Radio.Group>
           <Radio value='All'>All</Radio>
           <Radio value='Completed'>Completed</Radio>
           <Radio value='Todo'>To do</Radio>
         </Radio.Group>
       </Col>
+      {/* Filter By Priority */}
       <Col sm={24}>
         <Typography.Paragraph
           style={{ fontWeight: 'bold', marginBottom: 3, marginTop: 10 }}
         >
           Filter By Priority
         </Typography.Paragraph>
+
         <Select
           mode='multiple'
           allowClear
@@ -48,6 +53,7 @@ export default function Filters() {
           </Select.Option>
         </Select>
       </Col>
+
     </Row>
   );
 }

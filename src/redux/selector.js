@@ -1,0 +1,1 @@
+export const todoListSelector = (stata) => stata.todoList
